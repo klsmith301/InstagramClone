@@ -193,6 +193,7 @@ function Save(props) {
                                 horizontal={true}
                                 MaxVisibleRowCount={3}
                             />
+                            <Text style={styles.charCount}>{caption.length} characters</Text>
                         </View>
                         <View>
                             {props.route.params.type ?
@@ -268,7 +269,13 @@ const styles = StyleSheet.create({
     usernameText: {
         fontSize: 12,
         color: 'rgba(0,0,0,0.6)'
-    }
+    },
+    charCount: {
+        fontSize: 12,
+        color: 'rgba(0,0,0,0.4)',
+        textAlign: 'right',
+        marginTop: 2,
+    },
 });
 
 const mapStateToProps = (store) => ({
