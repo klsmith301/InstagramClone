@@ -5,7 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@ffprobe-installer/ffprobe": "^1.1.0",
@@ -67,7 +69,16 @@
   },
   "devDependencies": {
     "@babel/core": "~7.13.0",
-    "babel-plugin-module-resolver": "^4.1.0"
+    "@testing-library/react-native": "^9.0.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "jest": "^26.6.3",
+    "jest-expo": "^41.0.1",
+    "react-test-renderer": "^16.13.1"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "testEnvironment": "node"
   },
   "private": true
 }
